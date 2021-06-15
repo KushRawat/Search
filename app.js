@@ -6,7 +6,10 @@ form.addEventListener('submit', async function(e) {
     const searchTerm = form.elements.query.value
     
     // API CALL USING AXIOS
-    const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`)
+    const config = {params: {q: searchTerm}} // to add multiple things as query string instead of adding it to the url
+    // const config = {params: {q: searchTerm, isFunny: 'Kush'}} // to add multiple things as query string instead of adding it to the url
+    const res = await axios.get(`http://api.tvmaze.com/search/shows`, config) // config is an axios object
+    // const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`)
     searchData(res.data) 
     // console.log(res)
     // console.log(res.data) // SEARCHED SHOW DATA
