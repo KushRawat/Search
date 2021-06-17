@@ -15,9 +15,21 @@ form.addEventListener("submit", async function (e) {
   const res = await axios.get(`http://api.tvmaze.com/search/shows`, config); // config is an axios object
   // const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`)
   showData(res.data);
-  // console.log(res)P
+  console.log(res.data);
+  console.log(res.data[0].show.genres);
+  console.log(res.data[0].show.name);
+  console.log(res.data[0].show.network.name);
+  console.log(res.data[0].show.officialSite);
+  console.log(res.data[0].show.rating.average);
+  console.log(res.data[0].show.premiered);
+  console.log(res.data[0].show.schedule);
+  console.log(res.data[0].show.schedule.time);
+  console.log(res.data[0].show.schedule.days);
+  console.log(res.data[0].show.status);
+  console.log(res.data[0].show.summary);
   // console.log(res.data) // SEARCHED SHOW DATA
   // console.log(res.data[0].show.image.medium) // SHOWS SHOW IMAGE
+  // form.elements.query.value = ''
 });
 
 const showData = (shows) => {
@@ -27,6 +39,46 @@ const showData = (shows) => {
       const img = document.createElement("IMG");
       img.src = result.show.image.medium;
       resultsDiv.append(img);
+    }
+    if (result.show.genres) {
+      const genres = document.createElement("div");
+      genres.innerHTML = result.show.genres;
+      resultsDiv.append(genres);
+    }
+    if (result.show.name) {
+      const name = document.createElement("div");
+      name.innerHTML = result.show.name;
+      resultsDiv.append(name);
+    }
+    if (result.show.network.name) {
+      const networkName = document.createElement("div");
+      networkName.innerHTML = result.show.network.name;
+      resultsDiv.append(networkName);
+    }
+    if (result.show.officialSite) {
+      const site = document.createElement("div");
+      site.innerHTML = result.show.officialSite;
+      resultsDiv.append(site);
+    }
+    if (result.show.rating.average) {
+      const ratings = document.createElement("div");
+      ratings.innerHTML = result.show.rating.average;
+      resultsDiv.append(ratings);
+    }
+    if (result.show.premiered) {
+      const premiered = document.createElement("div");
+      premiered.innerHTML = result.show.premiered;
+      resultsDiv.append(premiered);
+    }
+    if (result.show.status) {
+      const status = document.createElement("div");
+      status.innerHTML = result.show.status;
+      resultsDiv.append(status);
+    }
+    if (result.show.summary) {
+      const summary = document.createElement("div");
+      summary.innerHTML = result.show.summary;
+      resultsDiv.append(summary);
     }
   }
 };
