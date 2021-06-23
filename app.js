@@ -1,7 +1,7 @@
 const form = document.querySelector("#searchForm");
 const resultsDiv = document.querySelector("#results");
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener("input", async function (e) {
   e.preventDefault(); //PREVENTING THE FORM FROM REQUESTING ACTION
   resultsDiv.innerHTML = ""; // TO CLEAR PREVIOUS SEARCHED RESULT
 
@@ -35,20 +35,28 @@ form.addEventListener("submit", async function (e) {
 const showData = (shows) => {
   for (let result of shows) {
     // console.log(result) //testing
+    const br = document.createElement("br");
+    resultsDiv.append(br);
     if (result.show.image) {
       const img = document.createElement("IMG");
       img.src = result.show.image.medium;
       resultsDiv.append(img);
     }
+    if (!result.show.image) {
+      const img = document.createElement("IMG");
+      img.src = "https://tinyurl.com/tv-missing";
+      resultsDiv.append(img);
+    }
+    if (result.show.name) {
+      const name = document.createElement("h2");
+      name.setAttribute("class", "title");
+      name.innerHTML = result.show.name;
+      resultsDiv.append(name);
+    }
     if (result.show.genres) {
       const genres = document.createElement("div");
       genres.innerHTML = result.show.genres;
       resultsDiv.append(genres);
-    }
-    if (result.show.name) {
-      const name = document.createElement("div");
-      name.innerHTML = result.show.name;
-      resultsDiv.append(name);
     }
     if (result.show.network.name) {
       const networkName = document.createElement("div");
@@ -56,7 +64,9 @@ const showData = (shows) => {
       resultsDiv.append(networkName);
     }
     if (result.show.officialSite) {
-      const site = document.createElement("div");
+      const site = document.createElement("a");
+      site.setAttribute("href", result.show.officialSite);
+      site.setAttribute("class", "link");
       site.innerHTML = result.show.officialSite;
       resultsDiv.append(site);
     }
@@ -77,8 +87,11 @@ const showData = (shows) => {
     }
     if (result.show.summary) {
       const summary = document.createElement("div");
+      summary.setAttribute("class", "summary");
       summary.innerHTML = result.show.summary;
       resultsDiv.append(summary);
     }
+    const hr = document.createElement("hr");
+    resultsDiv.append(hr);
   }
 };

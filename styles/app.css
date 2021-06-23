@@ -1,0 +1,83 @@
+h1 {
+  color: #3c1874;
+  font-weight: normal;
+  font-family: monospace, fantasy, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+  /* background-color: rgb(213, 215, 214); */
+  text-align: center;
+  font-weight: ;
+}
+
+#button {
+  color: #f3f3f3;
+  background-color: #3c1874;
+  font-weight: ;
+  /* color: #ffffff; */
+  /* background: #232323; */
+  /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, */
+  /* 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18; */
+}
+
+#results {
+  background-color: #283747;
+  color: #ddaf94;
+}
+
+.title {
+  font-family: lucida console;
+  font-size: 26px;
+  /* font-weight: normal; */
+  /* font-family:courier; */
+  /* font-family:brush script mt; */
+  /* font-family:helvetica; */
+}
+
+.summary {
+  line-height: 1.5;
+  /* letter-spacing: ; */
+  /* text-decoration: underline dotted white; */
+  /* font-size:smaller; */
+  /* font-weight:lighter; */
+  /* font-family: lucida console; */
+}
+
+.summary i,
+.summary b {
+  color: #de354c;
+  /* font-family: lucida console; */
+}
+
+.link {
+  /* color: #EEFBFB; */
+  color: #dce1e3;
+  /* color:#FDF8F5; */
+}
+
+input {
+  color:#3c1874;
+  font-size: 15px;
+  font-family:lucida console ;
+  /* background-color:#DCE1E3; */
+}
+
+input:hover {
+  background-color: #fca311;
+}
+
+.link:hover {
+  color: #fca311;
+  font-size: 17px;
+  text-decoration:none ;
+  /* font-weight: bold; */
+}
+
+.link:active {
+  color: #2a9d8f;
+}
+
+.summary::first-letter {
+  font-size: 25px;
+}
