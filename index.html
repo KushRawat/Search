@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles/app.css" />
   </head>
-
   <body>
     <header>
       <h1>TV Show Search</h1>
@@ -16,9 +15,14 @@
 
     <nav>
       <form id="searchForm">
-        <input type="text" placeholder="TV Show Title" name="query" />
+        <input type="search" placeholder="TV Show Title" name="query" />
         <button disabled id="button">Search</button>
       </form>
+      <p id="quoteTop">
+        “If you believe that your thoughts originate inside your brain, do you
+        also believe that television shows are made inside your television set?”
+        ― Warren Ellis
+      </p>
     </nav>
 
     <br />
@@ -27,7 +31,12 @@
       <div id="results"></div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p id="quoteBottom">
+        “I find television very educating. Every time somebody turns on the set,
+        I go into the other room and read a book.” ― Groucho Marx
+      </p>
+    </footer>
 
     <script src="app.js"></script>
   </body>

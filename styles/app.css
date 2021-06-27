@@ -1,9 +1,3 @@
-h1 {
-  color: #3c1874;
-  font-weight: normal;
-  font-family: monospace, fantasy, Arial, Helvetica, sans-serif;
-}
-
 body {
   background-color: #f3f3f3;
   /* background-color: rgb(213, 215, 214); */
@@ -11,9 +5,58 @@ body {
   /* font-weight: ; */
 }
 
+#quoteTop {
+  color: #3c1874;
+  /* font-family:lucida console ; */
+  font-family: fantasy;
+  font-size: 30px;
+  text-align: center;
+}
+#quoteBottom {
+  color: #3c1874;
+  font-family: fantasy;
+  font-size: 40px;
+  text-align: center;
+}
+
+h1 {
+  /* padding: ; */
+  color: #3c1874;
+  font-weight: normal;
+  font-family: monospace, fantasy, Arial, Helvetica, sans-serif;
+  /* margin-bottom: 0; */
+}
+
+/* #searchForm:focus {
+  border: 4px solid #fca311
+  box-sizing: border-box;
+} */
+
+input {
+  color: #3c1874;
+  font-size: 15px;
+  font-family: lucida console;
+  /* border: 1px solid #3c1874; */
+  /* border-radius: 20%; */
+  /* border-radius: 10px; */
+  /* background-color:#DCE1E3; */
+}
+
+input:hover {
+  background-color: #fca311;
+}
+
+input:focus {
+  background-color: white;
+  border: 4px solid #fca311;
+  box-sizing: border-box;
+}
+
 #button {
+  padding: 1px 10px;
   color: #f3f3f3;
   background-color: #3c1874;
+  border-radius: 10px;
   /* font-weight: ; */
   /* color: #ffffff; */
   /* background: #232323; */
@@ -21,10 +64,25 @@ body {
   /* 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18; */
 }
 
-#results {
+.card {
   background-color: #283747;
   color: #ddaf94;
+  /* width: 500px; */
+  /* text-align: center; */
+  border-width: 3px;
+  border-color: #fca311;
+  border-style: solid;
+  border-radius: 1%;
+  box-sizing: border-box;
 }
+.card img {
+  /* border-radius: 10% / 50%; */
+  border-radius: 30px;
+}
+/* #results {
+  background-color: #283747;
+  color: #ddaf94;
+} */
 
 .title {
   font-family: lucida console;
@@ -56,21 +114,10 @@ body {
   /* color:#FDF8F5; */
 }
 
-input {
-  color:#3c1874;
-  font-size: 15px;
-  font-family:lucida console ;
-  /* background-color:#DCE1E3; */
-}
-
-input:hover {
-  background-color: #fca311;
-}
-
 .link:hover {
   color: #fca311;
   font-size: 17px;
-  text-decoration:none ;
+  text-decoration: none;
   /* font-weight: bold; */
 }
 
