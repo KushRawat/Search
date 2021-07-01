@@ -5,25 +5,24 @@ body {
   /* font-weight: ; */
 }
 
-#quoteTop {
-  color: #3c1874;
-  /* font-family:lucida console ; */
-  font-family: fantasy;
-  font-size: 30px;
-  text-align: center;
+/* .fixed1 {
+  position: sticky;
+  top: 30px;
+  left: 400px;
 }
-#quoteBottom {
-  color: #3c1874;
-  font-family: fantasy;
-  font-size: 40px;
-  text-align: center;
-}
+.fixed2 {
+  position: sticky;
+  top: 130px;
+  left: 400px;
+} */
 
 h1 {
   /* padding: ; */
   color: #3c1874;
   font-weight: normal;
-  font-family: monospace, fantasy, Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  margin: 25px auto;
+  font-family: fantasy, Arial, Helvetica, sans-serif;
   /* margin-bottom: 0; */
 }
 
@@ -33,9 +32,17 @@ h1 {
 } */
 
 input {
+  margin: 0 auto;
+  width: 350px;
+  height: 25px;
+  /* padding: 5px 0px 5px 4px; */
+  border: 1px solid #3c1874;
+  /* margin-bottom: 20px; */
   color: #3c1874;
   font-size: 15px;
   font-family: lucida console;
+  box-sizing: border-box;
+  /* display: inline-block; */
   /* border: 1px solid #3c1874; */
   /* border-radius: 20%; */
   /* border-radius: 10px; */
@@ -44,24 +51,55 @@ input {
 
 input:hover {
   background-color: #fca311;
+  transition: 0.5s;
+  /* cursor: pointer; */
 }
 
 input:focus {
+  transition: 0.5s;
   background-color: white;
-  border: 4px solid #fca311;
+  border: 5px solid #fca311;
   box-sizing: border-box;
 }
 
 #button {
-  padding: 1px 10px;
+  /* width: 100px; */
+  /* height: ; */
+  padding: 3px 10px;
   color: #f3f3f3;
   background-color: #3c1874;
-  border-radius: 10px;
+  border-radius: 50px;
   /* font-weight: ; */
   /* color: #ffffff; */
   /* background: #232323; */
   /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, */
   /* 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18; */
+}
+
+#quoteTop {
+  color: #3c1874;
+  font-family: "Yellowtail", cursive;
+  /* font-family: lucida console; */
+  /* font-family: monospace; */
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 20px;
+  margin-bottom: 35px;
+  font-weight: 100;
+
+  /* margin:  auto; */
+}
+#quoteBottom {
+  color: #3c1874;
+  /* font-family: lucida console; */
+  font-family: "Yellowtail", cursive;
+  font-weight: 100;
+  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+  /* position: -webkit-sticky; */
 }
 
 .card {
@@ -118,6 +156,7 @@ input:focus {
   color: #fca311;
   font-size: 17px;
   text-decoration: none;
+  cursor: pointer;
   /* font-weight: bold; */
 }
 

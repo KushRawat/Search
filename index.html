@@ -6,33 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TV Show Search</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/app.css" />
   </head>
   <body>
-    <header>
+    <header class="fixed1">
       <h1>TV Show Search</h1>
     </header>
 
-    <nav>
+    <nav class="fixed2">
       <form id="searchForm">
         <input type="search" placeholder="TV Show Title" name="query" />
         <button disabled id="button">Search</button>
       </form>
-      <p id="quoteTop">
-        “If you believe that your thoughts originate inside your brain, do you
-        also believe that television shows are made inside your television set?”
-        ― Warren Ellis
-      </p>
     </nav>
 
     <br />
 
     <main>
+      <p style="display: none" id="quoteTop">
+        “If you believe that your thoughts originate inside your brain, do you
+        also believe that television shows are made inside your television set?”
+        ― Warren Ellis
+      </p>
       <div id="results"></div>
     </main>
 
     <footer>
-      <p id="quoteBottom">
+      <p style="display: none" id="quoteBottom">
         “I find television very educating. Every time somebody turns on the set,
         I go into the other room and read a book.” ― Groucho Marx
       </p>
