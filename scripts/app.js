@@ -15,7 +15,7 @@ form.addEventListener("input", async function (e) {
   // API CALL USING AXIOS
   const config = { params: { q: searchTerm } }; // to add multiple things as query string instead of adding it to the url
   // const config = {params: {q: searchTerm, isFunny: 'Kush'}} // to add multiple things as query string instead of adding it to the url
-  const res = await axios.get(`http://api.tvmaze.com/search/shows`, config); // config is an axios object
+  const res = await axios.get(`https://api.tvmaze.com/search/shows`, config); // config is an axios object
   // const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`)
   showData(res.data);
   // console.log(res.data);
